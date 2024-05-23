@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Socket.io</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* #message-container {
+            border: 1.5px solid;
+            min-height: 50vh;
+            width: 70vw;
+            display: flex;
+            flex-direction: column;
+        } */
+
+        input {
+            width: 50vw;
+            padding: 3px 5px;
+        }
+
+        button {
+            width: 50px;
+            padding: 3px 5px;
+        }
+
+        .user-msg {
+            background-color: grey;
+            padding: 5px 10px;
+            color: aliceblue;
+            border-radius: 8px;
+            margin: 5px 10px;
+            float: right;
+            width: fit-content;
+
+        }
+
+        #message-container {
+           border: 1.5px solid;
+           display: flex;
+           flex-direction: column;
+           width: 70vw;
+           min-height: 50vh;
+        }
+
+        .move-right{
+            background-color: gray;
+            color: azure;
+
+        }
+
+        
+    </style>
+</head>
+
+<body>
+    <div id="message-container"></div>
+    <form action="" id="form">
+        <table>
+            <tr>
+                <td><label for="message-input">Message</label></td>
+                <td><input type="text" name="" id="message-input"></td>
+                <td><button id="send-button" type="submit">Send</button></td>
+            </tr>
+            <tr>
+                <td><label for="room-input">Room</label></td>
+                <td><input type="text" name="" id="room-input"></td>
+                <td><button id="room-button" type="button">Join</button></td>
+            </tr>
+        </table>
+    </form>
+    <script src="./script.js"></script>
+</body>
+
+</html>
