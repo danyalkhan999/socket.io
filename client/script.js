@@ -16,9 +16,32 @@ socket.on("connect", () => {
 socket.on('recieve-message', (message) => {
     console.log("recieved message", message);
     const recieveMessage = createChatHistory(message, "recieved");
-
+    pushNotification(message)
     document.getElementById('chat-history').appendChild(recieveMessage)
 })
+
+// send notification
+
+function getTime() {
+    const now = new Date();
+    const hours = now.getHours();
+    const minutes = now.getMinutes();
+    const seconds = now.getSeconds();
+
+    return `${hours}:${minutes}:${seconds}`;
+}
+
+function pushNotification(message) {
+    Notification.requestPermission().then((req) =>{
+        if(req === "granted"){
+            new Notification("New Message" , {
+                body: message,
+                data: {time: getTime()},
+                tag: 'New Message'
+            })
+        }
+    })
+}
 
 // Send message
 sendButton.addEventListener('click', (e) => {
