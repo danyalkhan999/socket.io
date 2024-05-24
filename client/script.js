@@ -37,7 +37,7 @@ function pushNotification(message) {
             new Notification("New Message" , {
                 body: message,
                 data: {time: getTime()},
-                tag: 'New Message'
+                // tag: 'New Message'
             })
         }
     })
